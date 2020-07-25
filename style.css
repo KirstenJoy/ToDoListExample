@@ -1,77 +1,216 @@
 body {
+    padding: 0;
+    margin: 0;
+    background-color: #152238 !important;
+    font-family: 'Raleway', sans-serif !important;
+}
+
+.todo {
+    color: white;
+}
+
+.container1 {
+    padding: 10px;
+    width: 550px;
+    margin-left: auto;
+    margin-right: auto;
+    position: static;
+    margin-top: 20px;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.664);
+    align-content: center;
+    margin-bottom: 10%;
+    box-shadow: 0px 10px 10px 10px #fff;
+}
+
+.container1:hover {
+    transform: scale(1.1);
+    -webkit-transition: .7s ease-in-out;
+}
+
+.header {
+    width: 100%;
+    height: 250px;
+    background-image: url('images/ToDo.jpg');
+    background-size: auto;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    border-radius: 15px 15px 0 0;
     position: relative;
 }
 
-.plus {
-    margin: 10px;
-    width: 80px;
-    height: 80px;
-}
-
-.info {
-    background-color: white;
-    border-radius: 5px;
+.clear {
+    width: 30px;
+    height: 30px;
     position: absolute;
-    margin: 15px;
-    z-index: 2;
-    width: 550px;
-    height: 450px;
-    padding-left: 20px;
+    right: 20px;
+    top: 20px;
 }
 
-.maindiv {
-    height: 900px;
+.clear i {
+    font-size: 45px;
+    color: #FFF;
+    text-shadow: 10px 3px 20px rgb(247, 10, 2);
 }
 
-h2 {
-    padding-top: 10px;
+.clear i:hover {
+    cursor: pointer;
+    text-shadow: 1px 3px 5px #000000;
+    transform: scale(1.2) rotate(120deg) translateX(5px) translateZ(5px);
 }
 
-input[type=text] {
-    width: 130px;
-    -webkit-transition: width 0.4s ease-in-out;
-    transition: width 0.4s ease-in-out;
+#date {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: #000000;
+    background-color: rgba(245, 245, 245, 0.37);
+    border-radius: 15px;
+    border: solid 1px;
+    font-size: 40px;
+    font-family: 'Raleway', sans-serif;
 }
 
-
-/* When the input field gets focus, change its width to 100% */
-
-input[type=text]:focus {
+.content {
     width: 100%;
+    height: 500px;
+    max-height: 350px;
+    background-color: #FFF;
+    overflow: auto;
 }
 
-#tasks {
-    width: 200px;
+.content::-webkit-scrollbar {
+    display: none;
 }
 
-.import {
-    background-color: tomato;
+.content ul {
+    padding: 0;
+    margin: 0;
 }
 
-.prior {
-    background-color: turquoise;
+.item {
+    width: 100%;
+    height: 45px;
+    min-height: 45px;
+    position: relative;
+    border-bottom: 1px solid #fff;
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
-.finish {
-    background-color: violet;
+.item i.co {
+    position: absolute;
+    font-size: 25px;
+    padding-left: 5px;
+    left: 15px;
+    top: 10px;
 }
 
-h1 {
-    text-align: center;
+.item i.co:hover {
+    cursor: pointer;
 }
 
-.options {
-    height: 550px;
+.fa-check-circle {
+    color: #6eb200;
 }
 
-.lenw {
-    margin: auto;
-    text-align: center;
-    width: 800px;
+.item p.text {
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    font-size: 20px;
+    left: 50px;
+    top: 5px;
+    background-color: #FFF;
+    max-width: 285px;
 }
 
-@media only screen and (max-width: 900px) {
-    .lenw {
-        width: 150px;
+.lineThrough {
+    text-decoration: line-through;
+    color: #ccc;
+}
+
+.item i.de {
+    position: absolute;
+    font-size: 30px;
+    right: 15px;
+    top: 10px;
+}
+
+.item i.de:hover {
+    color: #af0000;
+    cursor: pointer;
+}
+
+.add-to-do {
+    border: double 5px #fff;
+    border-radius: 20px;
+    position: relative;
+    width: 300px;
+    height: 60px;
+    background-color: rgba(255, 255, 255, 0.404);
+    padding: 10px;
+}
+
+.add-to-do i {
+    position: absolute;
+    font-size: 40px;
+    color: #fff;
+}
+
+.add-to-do input {
+    position: absolute;
+    left: 50px;
+    height: 35px;
+    width: 310px;
+    background-color: transparent;
+    border: 0px solid;
+    font-size: 20px;
+    padding-left: 10px;
+    outline: none;
+}
+
+.add-to-do ::placeholder {
+    color: #fff;
+}
+
+.jumbotron {
+    background-image: url(https://images.pexels.com/photos/1629236/pexels-photo-1629236.jpeg?cs=srgb&dl=blue-and-red-galaxy-artwork-1629236.jpg&fm=jpg);
+    background-size: cover;
+    height: 400px;
+}
+
+@media only screen and (max-width:375px) {
+    .container1 {
+        width: 80%;
+        transform: none !important;
+    }
+}
+
+@media only screen and (max-width:414px) {
+    .container1 {
+        width: 80%;
+        transform: none !important;
+        margin-top: -200px;
+    }
+}
+
+@media only screen and (max-width:320px) {
+    .container1 {
+        width: 80%;
+        transform: none !important;
+        margin-top: -100px;
+    }
+}
+
+@media only screen and (max-width:360px) {
+    .container1 {
+        width: 80%;
+        transform: none !important;
+        margin-top: -100px;
+    }
+    .jumbotron {
+        width: 100%;
     }
 }
